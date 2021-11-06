@@ -77,7 +77,7 @@ class Session{
         }
         $clicks++;
         $this->cps = [$time, $clicks];
-        if($this->getClicks() > 3){
+        if($this->getClicks() >= 20){
             $cps = $this->getClicks();
             $ping = $this->getPlayer()->getPing();
             $tps = Server::getInstance()->getTickUsageAverage();
